@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//order model
 const orderSchema = new mongoose.Schema({
 
 orderId : {
