@@ -2,7 +2,9 @@ import User from "../models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"; 
 import dotenv from 'dotenv';
+import cors from 'cors';
 dotenv.config();
+
 
 export function saveUser(req, res) {
     
@@ -76,6 +78,7 @@ export function loginUser(req, res) {
          res.json({
           message : "Login Successful",
           token: token,
+          user: userData
          })  
  
         }else{
