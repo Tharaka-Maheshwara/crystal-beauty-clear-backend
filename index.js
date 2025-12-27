@@ -6,15 +6,15 @@ import userRouter from "./routes/userRouter.js";
 import productRouter from "./routes/productRouter.js";
 import verifyJWT from "./middleware/auth.js";
 import orderRouter from "./routes/orderRouter.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 // Initialize Express application
 const app = express();
 
 // Connect to MongoDB database
 mongoose
-  .connect(
-    "mongodb+srv://admin:123@cluster0.z596bqh.mongodb.net/?appName=Cluster0"
-  )
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("connected to database");
   })
