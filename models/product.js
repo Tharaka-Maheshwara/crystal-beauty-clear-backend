@@ -21,12 +21,12 @@ altName : {
 },
 
 price : {
-    type : String,
+    type : Number,
     required: true
 },
 
 labeledPrice: {
-    type : String,
+    type : Number,
     required: true
 },
 
